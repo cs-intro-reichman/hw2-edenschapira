@@ -5,7 +5,7 @@ public class TimeCalc {
         int minutes = Integer.parseInt(time.substring(3,5));
         int minutesToTime = Integer.parseInt(args[1]);
         minutes += minutesToTime % 60;
-        if(minutes > 60){
+        if(minutes >= 60){
             int minutesMoreThan60 = minutes / 60;
             hours += minutesMoreThan60;
             minutes = minutes % 60;
