@@ -10,10 +10,11 @@ public class Cheers {
         public static void main(String[] args) {
         String cheer = args[0];
         int timesToCheer = Integer.parseInt(args[1]);
-        String needToBeAn = "AaEeFfHhIiLlMmNnOoRrSsXx";
+        String needToBeAn = "AEFHILMNORSX";
+        String cheerUpperCase = cheer.toUpperCase();
         int i = 0;
-        while (i<cheer.length()) {
-                char c = cheer.charAt(i);
+        while (i<cheerUpperCase.length()) {
+                char c = cheerUpperCase.charAt(i);
                 if(needToBeAn.indexOf(c)==-1){
                         System.out.println("Give me a " +c +": " +c +"!");
                 } else {
@@ -23,7 +24,7 @@ public class Cheers {
         }
         System.out.println("What does that spell?");
         for(int times=0; times<timesToCheer; times++){
-                System.out.println(cheer +"!!!");
+                System.out.println(cheerUpperCase +"!!!");
         }        
 	    
         }
